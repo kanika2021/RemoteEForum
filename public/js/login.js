@@ -27,6 +27,8 @@ form.addEventListener('submit', (event) => {
         error: function (jqXHR, textStatus, errorThrown) {
             console.log("failure");
             console.log(textStatus);
+            alert("incorrect email or password");
+            location.reload();
         }
     });
 });
