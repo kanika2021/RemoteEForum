@@ -19,12 +19,9 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.set('view engine', 'ejs');
 
 
-mongoose.connect('mongodb://localhost:27017/eduforum', { useUnifiedTopology: true, useNewUrlParser: true })
+mongoose.connect('mongodb+srv://Dragen2018:Dragen2018@eforum-cluster.lptyo.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', { useUnifiedTopology: true, useNewUrlParser: true })
     .then(() => console.log("Connected to Mongo database"))
     .catch(err => console.log(err));
-
-
-
 
 mongoose.set('useCreateIndex', true);
 
